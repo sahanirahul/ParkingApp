@@ -27,20 +27,10 @@ public class ParkingAppApplication {
 	
 	public static void startApp()
 	{
-		Properties prop =  new Properties();
-		File propFile = new File("src/main/resources/application.properties");
-	    InputStream inStream;
-		try {
-			inStream = new FileInputStream(propFile);
-			prop.load(inStream);
-		} catch (FileNotFoundException e1) {
-			e1.printStackTrace();
-		} catch (IOException e2) {
-			e2.printStackTrace();
-		}
+		Environment env = ApplicationContextLoader.getAppContext().getEnvironment();
 		
-		String inputFile = prop.getProperty("inputFile");
-		String outputFile = prop.getProperty("outputFile");
+		String inputFile = env.getProperty("inputFile");
+		String outputFile = env.getProperty("outputFile");
 		ApplicationContextLoader.getAppContext().getBean(ParkingService.class).startParkingService(inputFile,outputFile);
 	}
 

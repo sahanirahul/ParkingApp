@@ -43,9 +43,8 @@ public class ParkingService {
 		try
 		{
 			parkingReqRepo.deleteAll();
-			
-			BufferedReader reader = ParkingAppUtil.getBufferedReader(inputFile);
-			writer = ParkingAppUtil.getBufferedWriter(outputFile);
+			BufferedReader reader = ParkingAppUtil.getBufferedReader(System.getProperty("user.dir") + inputFile);
+			writer = ParkingAppUtil.getBufferedWriter(System.getProperty("user.dir") + outputFile);
 			writer.write("");
 			String line = null;
 			while ((line = reader.readLine()) != null) {
@@ -60,6 +59,8 @@ public class ParkingService {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
+		
+		System.exit(0);
 		
 	}
 
