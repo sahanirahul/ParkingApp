@@ -61,25 +61,6 @@ public class ParkingService {
 			e.printStackTrace();
 		}
 		
-		/*
-		 * createParking(5); generateParkingTicket("AS-01-RS-1457", 42);
-		 * generateParkingTicket("AS-01-RS-2547", 32);
-		 * generateParkingTicket("AS-01-RS-4587", 54);
-		 * generateParkingTicket("AS-01-RS-7854", 32);
-		 * 
-		 * getSlotNumbersOfDriversAge(32);
-		 * 
-		 * generateParkingTicket("PB-01-HH-1234", 54);
-		 * 
-		 * getSlotNumberOfVehicle("PB-01-HH-1234");
-		 * 
-		 * removeParkedVehicle(2);
-		 * 
-		 * generateParkingTicket("HR-29-TG-3098", 39);
-		 * 
-		 * getVehRegNumOfDriversAge(18); getVehRegNumOfDriversAge(54);
-		 */
-
 	}
 
 	public void executeCommand(String fullCommand) {
@@ -126,7 +107,6 @@ public class ParkingService {
 			writer.write(output);
 			writer.newLine();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
@@ -176,16 +156,6 @@ public class ParkingService {
 	}
 
 	public boolean isVehAlreadyParked(String veh_reg_num) {
-		/*
-		 * Iterable<ParkingRequest> listOfParkedCars = parkingReqRepo.findAll();
-		 * 
-		 * @SuppressWarnings("rawtypes") Iterator iterator =
-		 * listOfParkedCars.iterator();
-		 * 
-		 * while (iterator.hasNext()) { ParkingRequest element = (ParkingRequest)
-		 * iterator.next(); if(element.getVehicleRegNum().contentEquals(veh_reg_num));
-		 * return true; }
-		 */
 		List<ParkingRequest> list = parkingReqRepo.findByVehRegNum(veh_reg_num);
 		if (list == null || list.isEmpty())
 			return false;
@@ -210,10 +180,6 @@ public class ParkingService {
 					ParkingRecords record = Mapper.mapParkingRequestsToParkingRecords(req);
 					slots.add(record.getSlotNum());
 					record.setExitTimeStamp(new Timestamp(new Date().getTime()));
-					// parkingRecordsRepo.insert(record.getTicketId(), record.getSlotNum(),
-					// record.getVehicleRegNum(),
-					// record.getDriversAge(), record.getEntryTimeStamp(),
-					// record.getExitTimeStamp());
 					parkingRecordsRepo.save(record);
 					parkingReqRepo.delete(req);
 					
