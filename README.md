@@ -60,6 +60,8 @@ EXIT_TIMESTAMP (the time at which the parked vehicle wleft the parking)
 Database used : Microsoft Azure Sql Database (free account) Database connection details:  
 spring.datasource.url=****** spring.datasource.username=******* spring.datasource.password=********  
 Because of Microsoft Firewall security a connection request from unknown IP will be declined, The IP should be added before to connect from application  
+The Application connects to the database on start as such the database server should be up when running the application.  
+The database configuration can be changed in the properties file.  
 
 ## Design Details
 
