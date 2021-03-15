@@ -65,6 +65,7 @@ Because of Microsoft Firewall security a connection request from unknown IP will
 
 The application on start, will search for an input.txt file ( the file path has to be specified in the application.properties file) and it will start executing each command in the input file one by one.   
 The output of this commands will be logged into the console and also will be written in an output.txt file (the file path to be specified in the application.properties file).  
+Please look at the ApplicationDesignDiagram image for high level understanding of application flow.  
 
 ## How to build and run the application
 
