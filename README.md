@@ -73,5 +73,6 @@ Please look at the ApplicationDesignDiagram image for high level understanding o
 
 The application code is written in java 8 and is a maven project.  
 If an ide like eclipse is used you can directly run the application as java application (from the main class ParkingAppApplication).  
-Else you can maven build using the cmd : "mvn clean install" and then run the jar using "java -jar jarName" (this will require jre 8)  
+Else you can maven build using the cmd : "mvn clean install" and then run the jar using "java -jar jarName" (this will require jre 8) 
+You can also use the "parkingapp-0.0.1-SNAPSHOT.jar" present in the Jar directory and run it directly.  
 When directly running the jar please ensure that there is "files/input.txt" file in the same directory as the jar.
