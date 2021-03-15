@@ -34,10 +34,8 @@ public class ParkingAppApplication {
 			inStream = new FileInputStream(propFile);
 			prop.load(inStream);
 		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		} catch (IOException e2) {
-			// TODO Auto-generated catch block
 			e2.printStackTrace();
 		}
 		
