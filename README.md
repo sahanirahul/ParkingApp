@@ -66,8 +66,8 @@ Because of Microsoft Firewall security a connection request from unknown IP will
 The application on start, will search for an input.txt file ( the file path has to be specified in the application.properties file) and it will start executing each command in the input file one by one.   
 The output of this commands will be logged into the console and also will be written in an output.txt file (the file path to be specified in the application.properties file).  
 
-## How to r=build and run the application
+## How to build and run the application
 
-The application code is i=written in java 8 and is a maven project.  
-If an ide like eclipse is used you can directly run the application as java application (from the mail class ParkingAppApplication).  
+The application code is written in java 8 and is a maven project.  
+If an ide like eclipse is used you can directly run the application as java application (from the main class ParkingAppApplication).  
 Else you can maven build using the cmd : mvn clean install and then run the jar using java -jar jarName (this will require jre 8)  
