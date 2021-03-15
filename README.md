@@ -58,7 +58,9 @@ EXIT_TIMESTAMP (the time at which the parked vehicle wleft the parking)
 ### Database used is a Microsoft Azure SQL database
 
 Database used : Microsoft Azure Sql Database (free account) Database connection details:  
-spring.datasource.url=****** spring.datasource.username=******* spring.datasource.password=********  
+spring.datasource.url=******  
+spring.datasource.username=*******  
+spring.datasource.password=********    
 Because of Microsoft Firewall security a connection request from unknown IP will be declined, The IP should be added before to connect from application  
 The Application connects to the database on start as such the database server should be up when running the application.  
 The database configuration can be changed in the properties file.  
@@ -76,3 +78,7 @@ If an ide like eclipse is used you can directly run the application as java appl
 Else you can maven build using the cmd : "mvn clean install" and then run the jar using "java -jar jarName" (this will require jre 8) 
 You can also use the "parkingapp-0.0.1-SNAPSHOT.jar" present in the Jar directory and run it directly.  
 When directly running the jar please ensure that there is "files/input.txt" file in the same directory as the jar.
+
+## Authors
+
+* **Rahul Sahani**
